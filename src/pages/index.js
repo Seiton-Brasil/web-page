@@ -207,13 +207,15 @@ const HomePage = () => {
 
       <S.WrapperSecondary>
         <S.WrapperItems>
-          <h2>Time</h2>
+          <S.TitleWrapper>
+            <S.Title>TIME</S.Title>
+          </S.TitleWrapper>
         </S.WrapperItems>
       </S.WrapperSecondary>
 
       <S.WrapperFooter id="demo">
         <S.WrapperItems>
-          <S.BenefitsWrapper columns={4}>
+          <S.BenefitsWrapperFooter columns={4}>
             <S.LogoWrapper>
               <Img
                 fluid={LogoImage.childImageSharp.fluid}
@@ -223,7 +225,7 @@ const HomePage = () => {
             <CardContact title="Links" details={sections} />
             <CardContact title="Contatos" details={contacts} />
             <CardContact title="Redes Sociais" />
-          </S.BenefitsWrapper>
+          </S.BenefitsWrapperFooter>
         </S.WrapperItems>
       </S.WrapperFooter>
     </Layout>

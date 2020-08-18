@@ -3,9 +3,9 @@ import BackgroundImage from "gatsby-background-image"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
 const primaryColor = "#ffdb4d"
-const secondaryColor = "#b3b300"
-const tertiaryColor = "#ffeb99"
-const quartenaryColor = "#797979"
+// const secondaryColor = "#b3b300"
+// const tertiaryColor = "#ffeb99"
+// const quartenaryColor = "#797979"
 const quintenaryColor = "#595959"
 const primaryBackground = "#ffffff"
 const secondaryBackground = "#e7ff6e"
@@ -17,9 +17,19 @@ export const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   background-color: ${primaryBackground};
+  font-size: 14px;
+
+  @media (max-width: 1650px) {
+    height: 100%;
+    font-size: 12px;
+  }
 
   @media (max-width: 900px) {
-    height: 100vh;
+    font-size: 10px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 6px;
   }
 `
 
@@ -63,8 +73,13 @@ export const LogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 75px;
+  border-radius: 60px;
   background-color: ${props => props.color};
+
+  @media (max-width: 900px) {
+    width: 100%;
+    background-color: #ffffff;
+  }
 `
 
 export const ButtonsWrapper = styled.div`
@@ -77,7 +92,7 @@ export const Button = styled(AnchorLink)`
   color: ${primaryBackground};
   border: 0;
   padding: 1em;
-  font-size: 1em;
+  font-size: 0.89em;
   font-weight: 700;
   transition: all 300ms;
   text-decoration: none;
@@ -96,7 +111,7 @@ export const MenuWrapper = styled.div`
   display: none;
 
   @media (max-width: 900px) {
-    display: block;
+    display: none;
   }
 `
 
@@ -145,17 +160,34 @@ export const BenefitsWrapper = styled.div`
   @media (max-width: 1650px) {
     height: 100%;
     grid-template-columns: repeat(2, 1fr);
+    font-size: 17px;
   }
 
   @media (max-width: 900px) {
     height: 100%;
     grid-template-columns: 1fr;
     grid-gap: 0;
+    font-size: 16px;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 14px;
+  }
+`
+
+export const BenefitsWrapperFooter = styled(BenefitsWrapper)`
+  @media (max-width: 1650px) {
+    height: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 17px;
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
   }
 `
 
 export const Title = styled.h1`
-  font-size: 6em;
+  font-size: 5.98em;
   font-weight: bold;
   color: ${quintenaryColor};
 `
