@@ -38,6 +38,12 @@ const HomePage = () => {
       "Negociações livres de especulação, com segurança jurídica e garantias referentes à veracidade de informações fornecidas!",
     agilidade:
       "Te fornecemos todas as informações necessárias para que seus negócios estejam à apenas um clique de distância!",
+    historia:
+      "Somos uma startup criada por intermediários de vendas do setor mineral e desenvolvida por um time incrível! Em nossa trilha de desenvolvimento, encontramos suporte no programa de pré aceleração Agita Warm Up Serra Geral e em nosso parceiro FAVAG.",
+    visao:
+      "Pretendemos ser referência em transações de minérios rápidas, práticas e seguras em todo o mundo",
+    tecnologia:
+      "Trabalhamos com tecnologias que estão em alta no mercado e que são utilizadas por grandes empresas!",
   }
 
   return (
@@ -86,7 +92,7 @@ const HomePage = () => {
           <S.TitleWrapper>
             <S.Title>VANTAGENS</S.Title>
           </S.TitleWrapper>
-          <S.BenefitsWrapper>
+          <S.BenefitsWrapper columns={4}>
             <CardBenefits
               icon={I.IoMdChatboxes}
               title="desburocratização"
@@ -117,7 +123,29 @@ const HomePage = () => {
 
       <S.WrapperSecondary id="about">
         <S.WrapperItems>
-          <h1>Item 2</h1>
+          <S.TitleWrapper>
+            <S.Title>A SEITON</S.Title>
+          </S.TitleWrapper>
+          <S.BenefitsWrapper columns={3}>
+            <CardBenefits
+              icon={I.IoMdChatboxes}
+              title="Nossa história"
+              description={Descriptions.historia}
+              colorIcon="#797979"
+            />
+            <CardBenefits
+              icon={I.RiLightbulbFlashLine}
+              title="Nossa visão"
+              description={Descriptions.visao}
+              colorIcon="#797979"
+            />
+            <CardBenefits
+              icon={I.RiReactjsLine}
+              title="Nossa tecnologia"
+              description={Descriptions.tecnologia}
+              colorIcon="#797979"
+            />
+          </S.BenefitsWrapper>
         </S.WrapperItems>
       </S.WrapperSecondary>
     </Layout>

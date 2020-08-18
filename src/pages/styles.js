@@ -134,7 +134,7 @@ export const BenefitsWrapper = styled.div`
   width: 100%;
   height: 80%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(${props => props.columns}, 1fr);
   grid-gap: 2rem;
   align-items: center;
 
@@ -145,7 +145,7 @@ export const BenefitsWrapper = styled.div`
 
   @media (max-width: 900px) {
     height: 100%;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     grid-gap: 0;
   }
 `
