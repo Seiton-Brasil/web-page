@@ -10,7 +10,13 @@ import CardBenefits from "../components/CardBenefits"
 import * as S from "./styles"
 
 const HomePage = () => {
-  const { background, LogoImage } = useStaticQuery(graphql`
+  const {
+    background,
+    LogoImage,
+    Favaglab,
+    FavagSprint,
+    FavagLogo,
+  } = useStaticQuery(graphql`
     query {
       background: file(relativePath: { eq: "background-image.webp" }) {
         childImageSharp {
@@ -23,6 +29,27 @@ const HomePage = () => {
         childImageSharp {
           fluid(maxWidth: 110) {
             ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      Favaglab: file(relativePath: { eq: "favag-lab.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 368) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      FavagSprint: file(relativePath: { eq: "favag-sprint.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 360) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      FavagLogo: file(relativePath: { eq: "favag-logo.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 200) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -148,6 +175,34 @@ const HomePage = () => {
           </S.BenefitsWrapper>
         </S.WrapperItems>
       </S.WrapperSecondary>
+
+      <S.Wrapper>
+        <S.WrapperItems>
+          <S.TitleWrapper>
+            <S.Title>PARCEIROS</S.Title>
+          </S.TitleWrapper>
+          <S.BenefitsWrapper columns={3}>
+            <S.CardsWrapper>
+              <Img
+                fluid={Favaglab.childImageSharp.fluid}
+                style={{ width: 180 }}
+              />
+            </S.CardsWrapper>
+            <S.CardsWrapper>
+              <Img
+                fluid={FavagSprint.childImageSharp.fluid}
+                style={{ width: 180 }}
+              />
+            </S.CardsWrapper>
+            <S.CardsWrapper>
+              <Img
+                fluid={FavagLogo.childImageSharp.fluid}
+                style={{ width: 180 }}
+              />
+            </S.CardsWrapper>
+          </S.BenefitsWrapper>
+        </S.WrapperItems>
+      </S.Wrapper>
     </Layout>
   )
 }
