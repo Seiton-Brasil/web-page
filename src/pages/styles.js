@@ -27,6 +27,10 @@ export const WrapperSecondary = styled(Wrapper)`
   background-color: ${secondaryBackground};
 `
 
+export const WrapperFooter = styled(Wrapper)`
+  height: 60vh;
+`
+
 export const WrapperItems = styled.div`
   width: 60%;
   height: 100%;
@@ -60,7 +64,7 @@ export const LogoWrapper = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 75px;
-  background-color: ${primaryColor};
+  background-color: ${props => props.color};
 `
 
 export const ButtonsWrapper = styled.div`

@@ -6,6 +6,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import I from "../components/Icons"
 import CardBenefits from "../components/CardBenefits"
+import CardContact from "../components/CardContact"
 
 import * as S from "./styles"
 
@@ -85,7 +86,7 @@ const HomePage = () => {
         >
           <S.ImageBackgroundContent>
             <S.HeaderWrapper>
-              <S.LogoWrapper>
+              <S.LogoWrapper color="#ffdb4d">
                 <Img
                   fluid={LogoImage.childImageSharp.fluid}
                   style={{ width: 100, height: 100 }}
@@ -176,7 +177,7 @@ const HomePage = () => {
         </S.WrapperItems>
       </S.WrapperSecondary>
 
-      <S.Wrapper>
+      <S.Wrapper id="parterns">
         <S.WrapperItems>
           <S.TitleWrapper>
             <S.Title>PARCEIROS</S.Title>
@@ -203,8 +204,78 @@ const HomePage = () => {
           </S.BenefitsWrapper>
         </S.WrapperItems>
       </S.Wrapper>
+
+      <S.WrapperSecondary>
+        <S.WrapperItems>
+          <h2>Time</h2>
+        </S.WrapperItems>
+      </S.WrapperSecondary>
+
+      <S.WrapperFooter id="demo">
+        <S.WrapperItems>
+          <S.BenefitsWrapper columns={4}>
+            <S.LogoWrapper>
+              <Img
+                fluid={LogoImage.childImageSharp.fluid}
+                style={{ width: 100, height: 100 }}
+              />
+            </S.LogoWrapper>
+            <CardContact title="Links" details={sections} />
+            <CardContact title="Contatos" details={contacts} />
+            <CardContact title="Redes Sociais" />
+          </S.BenefitsWrapper>
+        </S.WrapperItems>
+      </S.WrapperFooter>
     </Layout>
   )
 }
+
+const sections = [
+  {
+    id: 1,
+    detail: "Página Inicial",
+    link: "#initial",
+  },
+  {
+    id: 2,
+    detail: "Vantagens",
+    link: "#benefits",
+  },
+  {
+    id: 3,
+    detail: "Sobre Nós",
+    link: "#about",
+  },
+  {
+    id: 4,
+    detail: "Parceiros",
+    link: "#parterns",
+  },
+  {
+    id: 5,
+    detail: "Contato",
+    link: "#",
+  },
+]
+
+const contacts = [
+  {
+    id: 1,
+    detail: "seitonnegociacoes@gmail.com",
+  },
+  {
+    id: 2,
+    detail: "(38) 99169-5259",
+  },
+  {
+    id: 3,
+    detail: "(38) 99199-2007",
+  },
+  {
+    id: 4,
+    detail:
+      "Av. Tancredo de Almeida Neves, 302 - Centro, Nova Porteirinha - MG, 39525-000",
+  },
+]
 
 export default HomePage
