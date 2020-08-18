@@ -119,3 +119,39 @@ export const TextDescription = styled.h1`
   font-weight: bold;
   font-size: 7em;
 `
+// BENEFITS SECTION -----------------------------------------
+export const TitleWrapper = styled.div`
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5%;
+`
+
+export const BenefitsWrapper = styled.div`
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  align-items: center;
+
+  @media (max-width: 1650px) {
+    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    height: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0;
+  }
+`
+
+export const Title = styled.h1`
+  font-size: 6em;
+  font-weight: bold;
+  color: ${quintenaryColor};
+`
