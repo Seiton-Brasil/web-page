@@ -11,7 +11,7 @@ const CardTeam = ({ Image, occupation, name }) => {
       <S.Name> {name} </S.Name>
       <S.Occupation> {occupation} </S.Occupation>
       <S.SocialWrapper>
-        <Icon.RiLinkedinLine color="#3f729b" />
+        <Icon.FaLinkedinIn color="#3f729b" />
       </S.SocialWrapper>
     </S.Wrapper>
   )

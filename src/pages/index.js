@@ -257,7 +257,9 @@ const HomePage = () => {
       <S.WrapperSecondary style={{ height: "100%", paddingBottom: "10%" }}>
         <S.WrapperItems>
           <S.TitleWrapper>
-            <S.Title>NOSSO TIME</S.Title>
+            <S.Title style={{ color: "#1a1a1a", marginBottom: "15%" }}>
+              NOSSO TIME
+            </S.Title>
           </S.TitleWrapper>
           <S.BenefitsWrapper columns={3}>
             <CardTeam

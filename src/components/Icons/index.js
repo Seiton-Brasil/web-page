@@ -10,6 +10,8 @@ import {
   RiLinkedinLine,
 } from "react-icons/ri"
 
+import { FaLinkedinIn, FaLinkedin, FaInstagramSquare } from "react-icons/fa"
+
 const Icons = {
   IoMdChatboxes,
   FiMapPin,
@@ -23,6 +25,9 @@ const Icons = {
   RiLinkedinBoxLine,
   RiFacebookBoxLine,
   RiLinkedinLine,
+  FaLinkedinIn,
+  FaLinkedin,
+  FaInstagramSquare,
 }
 
 export default Icons

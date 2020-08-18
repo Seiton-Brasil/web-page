@@ -63,20 +63,21 @@ export const ItemsWrapper = styled.div`
   }
 `
 export const Title = styled.h2`
-  font-size: 1.2em;
+  font-size: 1em;
   font-weight: bold;
   color: #797979;
   text-transform: uppercase;
+  margin-top: 15%;
 
-  @media (max-width: 450px) {
+  /* @media (max-width: 450px) {
     font-size: 1em;
-  }
+  } */
 `
 export const ItemsLink = styled(AnchorLink)`
   font-size: 1em;
   font-weight: bold;
   color: #797979;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.1em;
   transition: all 200ms;
   cursor: pointer;
   text-decoration: none;
