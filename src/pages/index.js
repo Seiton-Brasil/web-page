@@ -7,6 +7,7 @@ import SEO from "../components/Seo"
 import I from "../components/Icons"
 import CardBenefits from "../components/CardBenefits"
 import CardContact from "../components/CardContact"
+import CardTeam from "../components/CardTeam"
 
 import * as S from "./styles"
 
@@ -17,6 +18,12 @@ const HomePage = () => {
     Favaglab,
     FavagSprint,
     FavagLogo,
+    Deborah,
+    Thiago,
+    Mansueth,
+    Gabriel,
+    Leandro,
+    Daniel,
   } = useStaticQuery(graphql`
     query {
       background: file(relativePath: { eq: "background-image.webp" }) {
@@ -48,6 +55,48 @@ const HomePage = () => {
         }
       }
       FavagLogo: file(relativePath: { eq: "favag-logo.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      Deborah: file(relativePath: { eq: "Deborah.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      Thiago: file(relativePath: { eq: "Thiago.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      Mansueth: file(relativePath: { eq: "Mansueth.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      Gabriel: file(relativePath: { eq: "Gabriel.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      Leandro: file(relativePath: { eq: "Leandro.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      Daniel: file(relativePath: { eq: "Daniel.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 200) {
             ...GatsbyImageSharpFluid
@@ -205,11 +254,43 @@ const HomePage = () => {
         </S.WrapperItems>
       </S.Wrapper>
 
-      <S.WrapperSecondary>
+      <S.WrapperSecondary style={{ height: "100%", paddingBottom: "10%" }}>
         <S.WrapperItems>
           <S.TitleWrapper>
-            <S.Title>TIME</S.Title>
+            <S.Title>NOSSO TIME</S.Title>
           </S.TitleWrapper>
+          <S.BenefitsWrapper columns={3}>
+            <CardTeam
+              Image={Deborah.childImageSharp.fluid}
+              name="Deborah Ribeiro"
+              occupation="ceo"
+            />
+            <CardTeam
+              Image={Thiago.childImageSharp.fluid}
+              name="Thiago Ribeiro"
+              occupation="presidente"
+            />
+            <CardTeam
+              Image={Mansueth.childImageSharp.fluid}
+              name="Mansueth Veloso"
+              occupation="conselheiro"
+            />
+            <CardTeam
+              Image={Leandro.childImageSharp.fluid}
+              name="Wesley Leandro"
+              occupation="executivo de ti"
+            />
+            <CardTeam
+              Image={Gabriel.childImageSharp.fluid}
+              name="Gabriel Aguiar"
+              occupation="superintendente jurídico"
+            />
+            <CardTeam
+              Image={Daniel.childImageSharp.fluid}
+              name="Daniel Carvalho"
+              occupation="gestão de clientes"
+            />
+          </S.BenefitsWrapper>
         </S.WrapperItems>
       </S.WrapperSecondary>
 

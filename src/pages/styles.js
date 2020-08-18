@@ -38,7 +38,7 @@ export const WrapperSecondary = styled(Wrapper)`
 `
 
 export const WrapperFooter = styled(Wrapper)`
-  height: 60vh;
+  height: 45vh;
 `
 
 export const WrapperItems = styled.div`
