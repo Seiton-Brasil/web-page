@@ -9,7 +9,7 @@ import CardBenefits from "../components/CardBenefits"
 import CardContact from "../components/CardContact"
 import CardTeam from "../components/CardTeam"
 
-import * as S from "./styles"
+import * as S from "../styles/styles"
 
 const HomePage = () => {
   const {
