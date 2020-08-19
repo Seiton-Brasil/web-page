@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
@@ -123,6 +123,8 @@ const HomePage = () => {
       "Trabalhamos com tecnologias que estão em alta no mercado e que são utilizadas por grandes empresas!",
   }
 
+  const [isMenuVisible, setIsMenuVisible] = useState(false)
+
   return (
     <Layout>
       <SEO title="Seiton" />
@@ -150,7 +152,11 @@ const HomePage = () => {
                 <S.Button href="#demo">Demo</S.Button>
               </S.ButtonsWrapper>
               <S.MenuWrapper>
-                <I.MdMenu size={25} color="#fff" />
+                <I.MdMenu
+                  size={25}
+                  color="#ffdb4d"
+                  onClick={() => setIsMenuVisible(!isMenuVisible)}
+                />
               </S.MenuWrapper>
             </S.HeaderWrapper>
             <S.MainWrapper>
@@ -160,6 +166,51 @@ const HomePage = () => {
                 </S.TextDescription>
               </S.TextWrapper>
             </S.MainWrapper>
+            {isMenuVisible && (
+              <S.MenuAmburguerWrapper>
+                <S.Button
+                  onClick={() => setIsMenuVisible(!isMenuVisible)}
+                  href="#initial"
+                >
+                  Página Inicial
+                </S.Button>
+                <S.Button
+                  onClick={() => setIsMenuVisible(!isMenuVisible)}
+                  href="#benefits"
+                >
+                  Vantagens
+                </S.Button>
+                <S.Button
+                  onClick={() => setIsMenuVisible(!isMenuVisible)}
+                  href="#about"
+                >
+                  Sobre nós
+                </S.Button>
+                <S.Button
+                  onClick={() => setIsMenuVisible(!isMenuVisible)}
+                  href="#parterns"
+                >
+                  Parceiros
+                </S.Button>
+                <S.Button
+                  onClick={() => setIsMenuVisible(!isMenuVisible)}
+                  href="#contact"
+                >
+                  Contato
+                </S.Button>
+                <S.Button
+                  onClick={() => setIsMenuVisible(!isMenuVisible)}
+                  href="#demo"
+                >
+                  Demo
+                </S.Button>
+                <I.MdClose
+                  size={30}
+                  color="#ffdb4d"
+                  onClick={() => setIsMenuVisible(!isMenuVisible)}
+                />
+              </S.MenuAmburguerWrapper>
+            )}
           </S.ImageBackgroundContent>
         </S.ImageBackground>
       </S.Wrapper>
@@ -266,31 +317,37 @@ const HomePage = () => {
               Image={Deborah.childImageSharp.fluid}
               name="Deborah Ribeiro"
               occupation="ceo"
+              link="https://www.linkedin.com/in/deborahribeiro"
             />
             <CardTeam
               Image={Thiago.childImageSharp.fluid}
               name="Thiago Ribeiro"
               occupation="presidente"
+              link="https://www.linkedin.com/in/thiagoraphaelribeiro"
             />
             <CardTeam
               Image={Mansueth.childImageSharp.fluid}
               name="Mansueth Veloso"
               occupation="conselheiro"
+              link="https://www.linkedin.com/company/seiton-brasil/"
             />
             <CardTeam
               Image={Leandro.childImageSharp.fluid}
               name="Wesley Leandro"
               occupation="executivo de ti"
+              link="https://www.linkedin.com/in/wesley-leandro-43474416b"
             />
             <CardTeam
               Image={Gabriel.childImageSharp.fluid}
               name="Gabriel Aguiar"
               occupation="superintendente jurídico"
+              link="https://www.linkedin.com/company/seiton-brasil/"
             />
             <CardTeam
               Image={Daniel.childImageSharp.fluid}
               name="Daniel Carvalho"
               occupation="gestão de clientes"
+              link="https://www.linkedin.com/company/seiton-brasil/"
             />
           </S.BenefitsWrapper>
         </S.WrapperItems>
@@ -298,17 +355,17 @@ const HomePage = () => {
 
       <S.WrapperFooter id="demo">
         <S.WrapperItems>
-          <S.BenefitsWrapperFooter columns={4}>
-            <S.LogoWrapper>
+          <S.BenefitsWrapper columns={4}>
+            <S.LogoWrapperFooter>
               <Img
                 fluid={LogoImage.childImageSharp.fluid}
                 style={{ width: 100, height: 100 }}
               />
-            </S.LogoWrapper>
+            </S.LogoWrapperFooter>
             <CardContact title="Links" details={sections} />
             <CardContact title="Contatos" details={contacts} />
             <CardContact title="Redes Sociais" />
-          </S.BenefitsWrapperFooter>
+          </S.BenefitsWrapper>
         </S.WrapperItems>
       </S.WrapperFooter>
     </Layout>

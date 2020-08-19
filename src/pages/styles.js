@@ -3,9 +3,6 @@ import BackgroundImage from "gatsby-background-image"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
 const primaryColor = "#ffdb4d"
-// const secondaryColor = "#b3b300"
-// const tertiaryColor = "#ffeb99"
-// const quartenaryColor = "#797979"
 const quintenaryColor = "#595959"
 const primaryBackground = "#ffffff"
 const secondaryBackground = "#e7ff6e"
@@ -65,20 +62,27 @@ export const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+
+  @media (max-width: 900px) {
+    justify-content: center;
+  }
 `
 
 export const LogoWrapper = styled.div`
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 60px;
+  border-radius: 50%;
   background-color: ${props => props.color};
+`
 
+export const LogoWrapperFooter = styled(LogoWrapper)`
   @media (max-width: 900px) {
     width: 100%;
-    background-color: #ffffff;
+    background-color: transparent;
   }
 `
 
@@ -101,6 +105,10 @@ export const Button = styled(AnchorLink)`
     outline: 0;
   }
 
+  &:first-child {
+    color: ${primaryColor};
+  }
+
   &:hover {
     cursor: pointer;
     color: ${primaryColor};
@@ -111,8 +119,24 @@ export const MenuWrapper = styled.div`
   display: none;
 
   @media (max-width: 900px) {
-    display: none;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
   }
+`
+
+export const MenuAmburguerWrapper = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.9);
 `
 
 export const MainWrapper = styled.div`
@@ -178,7 +202,7 @@ export const BenefitsWrapper = styled.div`
 export const BenefitsWrapperFooter = styled(BenefitsWrapper)`
   @media (max-width: 1650px) {
     height: 100%;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     font-size: 17px;
   }
   @media (max-width: 900px) {

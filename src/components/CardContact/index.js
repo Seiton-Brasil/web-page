@@ -31,10 +31,20 @@ const CardContact = ({ title, details }) => {
         ) : (
           <S.IconWrapper>
             <S.Icon colorIcon="#ff4da6">
-              <Icon.FaInstagramSquare size={30} />
+              <S.LinkStyled
+                to="https://www.instagram.com/seitonbrasil/"
+                target="_blank"
+              >
+                <Icon.FaInstagramSquare size={30} />
+              </S.LinkStyled>
             </S.Icon>
             <S.Icon colorIcon="#3f729b">
-              <Icon.FaLinkedin size={30} />
+              <S.LinkStyled
+                to="https://www.linkedin.com/company/seiton-brasil/"
+                target="_blank"
+              >
+                <Icon.FaLinkedin size={30} />
+              </S.LinkStyled>
             </S.Icon>
           </S.IconWrapper>
         )}

@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 export const Wrapper = styled.section`
   width: 100%;
@@ -55,4 +56,8 @@ export const SocialWrapper = styled.div`
     font-size: 20px;
     margin-bottom: 2.5em;
   }
+`
+export const LinkStyled = styled(Link)`
+  text-decoration: none;
+  color: inherit;
 `

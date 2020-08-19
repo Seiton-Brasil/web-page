@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import AnchorLink from "react-anchor-link-smooth-scroll"
+import { Link } from "gatsby"
 
 export const Wrapper = styled.div`
   width: 70%;
@@ -122,4 +123,8 @@ export const Icon = styled.div`
     color: ${props => props.colorIcon};
     cursor: pointer;
   }
+`
+export const LinkStyled = styled(Link)`
+  text-decoration: none;
+  color: inherit;
 `
