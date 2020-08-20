@@ -14,15 +14,15 @@ export const Wrapper = styled.section`
   justify-content: center;
   align-items: center;
   background-color: ${primaryBackground};
-  font-size: 14px;
+  font-size: 16px;
 
-  @media (max-width: 1650px) {
-    height: 100%;
+  @media (max-width: 1440px) {
     font-size: 12px;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     font-size: 10px;
+    height: 100%;
   }
 
   @media (max-width: 450px) {
@@ -64,6 +64,8 @@ export const HeaderWrapper = styled.header`
   position: relative;
 
   @media (max-width: 900px) {
+    height: 40vh;
+    flex-direction: column;
     justify-content: center;
   }
 `
@@ -76,12 +78,20 @@ export const LogoWrapper = styled.div`
   align-items: center;
   border-radius: 50%;
   background-color: ${props => props.color};
+
+  @media (max-width: 1024px) {
+    width: 110px;
+    height: 110px;
+  }
 `
 
 export const LogoWrapperFooter = styled(LogoWrapper)`
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
+    width: 70%;
+  }
+
+  @media (max-width: 768px) {
     width: 100%;
-    background-color: transparent;
   }
 `
 
@@ -116,12 +126,10 @@ export const Button = styled(AnchorLink)`
 
 export const MenuWrapper = styled.div`
   display: none;
+  margin-top: 10px;
 
   @media (max-width: 900px) {
     display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
   }
 `
 
@@ -180,33 +188,31 @@ export const BenefitsWrapper = styled.div`
   grid-gap: 2rem;
   align-items: center;
 
-  @media (max-width: 1650px) {
-    height: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    font-size: 17px;
+  @media (max-width: 1440px) {
+    font-size: 0.98em;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     height: 100%;
-    grid-template-columns: 1fr;
     grid-gap: 0;
-    font-size: 16px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media (max-width: 450px) {
-    font-size: 14px;
+    grid-template-columns: 1fr;
+    font-size: 2em;
   }
 `
 
 export const BenefitsWrapperFooter = styled(BenefitsWrapper)`
-  @media (max-width: 1650px) {
+  /* @media (max-width: 1650px) {
     height: 100%;
     grid-template-columns: repeat(2, 1fr);
     font-size: 17px;
   }
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
-  }
+  } */
 `
 
 export const Title = styled.h1`

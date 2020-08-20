@@ -1,11 +1,13 @@
 import styled from "styled-components"
 
 export const Wrapper = styled.div`
+  max-width: 350px;
   height: 400px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
+  margin: 0 1em;
 `
 
 export const Title = styled.h3`
@@ -25,4 +27,5 @@ export const Description = styled.p`
 export const IconWrapper = styled.div`
   color: ${props => props.color};
   font-size: 100px;
+  margin-bottom: 0.35em;
 `

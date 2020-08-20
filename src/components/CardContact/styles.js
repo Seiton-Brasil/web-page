@@ -8,11 +8,16 @@ export const Wrapper = styled.div`
   border-top: 0.4em solid #797979;
 
   @media (max-width: 1650px) {
-    border-top: 0;
+    /* width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; */
+    border-top: 0.159em solid #797979;
   }
 
   @media (max-width: 900px) {
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -30,17 +35,8 @@ export const TitleWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
 
-  @media (max-width: 1650px) {
-    justify-content: center;
-  }
-
-  @media (max-width: 900px) {
-    justify-content: center;
+  @media (max-width: 1024px) {
     display: none;
-  }
-
-  @media (max-width: 450px) {
-    justify-content: center;
   }
 `
 export const ItemsWrapper = styled.div`
@@ -51,13 +47,7 @@ export const ItemsWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 
-  @media (max-width: 1650px) {
-    align-items: center;
-    margin: 1em 0 0 0;
-    text-align: center;
-  }
-
-  @media (max-width: 900px) {
+  @media (max-width: 1024px) {
     align-items: center;
     margin: 1.5em 0;
     text-align: center;
@@ -69,16 +59,11 @@ export const Title = styled.h2`
   color: #797979;
   text-transform: uppercase;
   margin-top: 15%;
-
-  /* @media (max-width: 450px) {
-    font-size: 1em;
-  } */
 `
 export const ItemsLink = styled(AnchorLink)`
   font-size: 1em;
   font-weight: bold;
   color: #797979;
-  margin-bottom: 0.1em;
   transition: all 200ms;
   cursor: pointer;
   text-decoration: none;

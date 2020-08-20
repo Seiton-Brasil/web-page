@@ -23,7 +23,6 @@ const HomePage = () => {
     Mansueth,
     Gabriel,
     Leandro,
-    Daniel,
   } = useStaticQuery(graphql`
     query {
       background: file(relativePath: { eq: "background-image.webp" }) {
@@ -96,13 +95,6 @@ const HomePage = () => {
           }
         }
       }
-      Daniel: file(relativePath: { eq: "Daniel.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   `)
 
@@ -110,7 +102,7 @@ const HomePage = () => {
     desburocratização:
       "Sabe a burocracia para encontrar compradores para seus minérios? Agora você pode fazer negócios sem burocracia e dor de cabeça!",
     desregionalização:
-      "Agora você pode acessar minérios em diferentes locais do Brasil, de forma simples e prática, e escolher de acordo a viabilidade econômica",
+      "Agora você pode acessar minérios em diferentes locais do Brasil, de forma simples e prática, e escolher de acordo a viabilidade econômica.",
     seguranca:
       "Negociações livres de especulação, com segurança jurídica e garantias referentes à veracidade de informações fornecidas!",
     agilidade:
@@ -118,7 +110,7 @@ const HomePage = () => {
     historia:
       "Somos uma startup criada por intermediários de vendas do setor mineral e desenvolvida por um time incrível! Em nossa trilha de desenvolvimento, encontramos suporte no programa de pré aceleração Agita Warm Up Serra Geral e em nosso parceiro FAVAG.",
     visao:
-      "Pretendemos ser referência em transações de minérios rápidas, práticas e seguras em todo o mundo",
+      "Pretendemos ser referência em transações de minérios rápidas, práticas e seguras em todo o mundo.",
     tecnologia:
       "Trabalhamos com tecnologias que estão em alta no mercado e que são utilizadas por grandes empresas!",
   }
@@ -148,7 +140,7 @@ const HomePage = () => {
                 <S.Button href="#benefits">Vantagens</S.Button>
                 <S.Button href="#about">Sobre nós</S.Button>
                 <S.Button href="#parterns">Parceiros</S.Button>
-                <S.Button href="#contact">Contato</S.Button>
+                {/* <S.Button href="#contact">Contato</S.Button> */}
                 <S.Button href="#demo">Demo</S.Button>
               </S.ButtonsWrapper>
               <S.MenuWrapper>
@@ -192,12 +184,12 @@ const HomePage = () => {
                 >
                   Parceiros
                 </S.Button>
-                <S.Button
+                {/* <S.Button
                   onClick={() => setIsMenuVisible(!isMenuVisible)}
                   href="#contact"
                 >
                   Contato
-                </S.Button>
+                </S.Button> */}
                 <S.Button
                   onClick={() => setIsMenuVisible(!isMenuVisible)}
                   href="#demo"
@@ -329,7 +321,7 @@ const HomePage = () => {
               Image={Mansueth.childImageSharp.fluid}
               name="Mansueth Veloso"
               occupation="conselheiro"
-              link="https://www.linkedin.com/company/seiton-brasil/"
+              link="https://www.linkedin.com/in/mansueth-veloso-054919124"
             />
             <CardTeam
               Image={Leandro.childImageSharp.fluid}
@@ -341,13 +333,7 @@ const HomePage = () => {
               Image={Gabriel.childImageSharp.fluid}
               name="Gabriel Aguiar"
               occupation="superintendente jurídico"
-              link="https://www.linkedin.com/company/seiton-brasil/"
-            />
-            <CardTeam
-              Image={Daniel.childImageSharp.fluid}
-              name="Daniel Carvalho"
-              occupation="gestão de clientes"
-              link="https://www.linkedin.com/company/seiton-brasil/"
+              link="https://www.linkedin.com/in/gabriel-aguiar-706894190"
             />
           </S.BenefitsWrapper>
         </S.WrapperItems>
@@ -392,11 +378,6 @@ const sections = [
     id: 4,
     detail: "Parceiros",
     link: "#parterns",
-  },
-  {
-    id: 5,
-    detail: "Contato",
-    link: "#",
   },
 ]
 
