@@ -12,15 +12,11 @@ const Form = () => {
   const handleEnvForm = e => {
     e.preventDefault()
     if (name && phone && email) {
-      Firebase.database()
-        .ref("form")
-        .set({
-          name,
-          phone,
-          email,
-        })
-        .then(res => console.log(res))
-        .catch(err => console.log(err))
+      Firebase.database().ref().push().set({
+        name: name,
+        phone: phone,
+        email: email,
+      })
 
       setSuccess(!success)
     } else {
@@ -32,7 +28,7 @@ const Form = () => {
     <S.Wrapper>
       {success ? (
         <>
-          <h4>Envie-nos seus dados para que possamos contatá-lo:</h4>
+          <S.Title>Envie-nos seus dados para que possamos contatá-lo:</S.Title>
           <form onSubmit={handleEnvForm}>
             <S.Input
               placeholder="Nome"

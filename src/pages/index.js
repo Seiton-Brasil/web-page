@@ -29,6 +29,7 @@ const HomePage = () => {
     Mansueth,
     Gabriel,
     Leandro,
+    Helano,
   } = useStaticQuery(graphql`
     query {
       background: file(relativePath: { eq: "background-image.webp" }) {
@@ -95,6 +96,13 @@ const HomePage = () => {
         }
       }
       Leandro: file(relativePath: { eq: "Leandro.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      Helano: file(relativePath: { eq: "Helano.jpeg" }) {
         childImageSharp {
           fluid(maxWidth: 200) {
             ...GatsbyImageSharpFluid
@@ -368,6 +376,12 @@ const HomePage = () => {
               name="Gabriel Aguiar"
               occupation="superintendente jurídico"
               link="https://www.linkedin.com/in/gabriel-aguiar-706894190"
+            />
+            <CardTeam
+              Image={Helano.childImageSharp.fluid}
+              name="Helano Celene"
+              occupation="investidor"
+              link="/"
             />
           </S.BenefitsWrapper>
         </S.WrapperItems>

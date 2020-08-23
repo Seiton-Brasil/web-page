@@ -31,7 +31,7 @@ export const Button = styled.button`
   width: 100%;
   margin-top: 1em;
   background-color: #ffffff;
-  color: #595959;
+  color: #bfbfbf;
   transition: all 200ms;
   cursor: pointer;
   border: 0.5px solid #bfbfbf;
@@ -39,6 +39,7 @@ export const Button = styled.button`
 
   :hover {
     border: 0.5px solid #737373;
+    color: #737373;
   }
 
   :focus {
@@ -55,4 +56,7 @@ export const Text = styled.h3`
   :hover {
     letter-spacing: 2px;
   }
+`
+export const Title = styled.h4`
+  font-size: 1.2em;
 `
