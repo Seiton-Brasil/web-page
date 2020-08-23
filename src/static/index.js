@@ -36,6 +36,11 @@ export const sections = [
     detail: "Parceiros",
     link: "#parterns",
   },
+  {
+    id: 5,
+    detail: "Contato",
+    link: "#contact",
+  },
 ]
 
 export const contacts = [

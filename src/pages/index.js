@@ -125,7 +125,7 @@ const HomePage = () => {
                 <S.Button href="#benefits">Vantagens</S.Button>
                 <S.Button href="#about">Sobre nós</S.Button>
                 <S.Button href="#parterns">Parceiros</S.Button>
-                {/* <S.Button href="#contact">Contato</S.Button> */}
+                <S.Button href="#contact">Contato</S.Button>
                 <S.Button href="#demo">Demo</S.Button>
               </S.ButtonsWrapper>
               <S.MenuWrapper>
@@ -169,12 +169,12 @@ const HomePage = () => {
                 >
                   Parceiros
                 </S.Button>
-                {/* <S.Button
+                <S.Button
                   onClick={() => setIsMenuVisible(!isMenuVisible)}
                   href="#contact"
                 >
                   Contato
-                </S.Button> */}
+                </S.Button>
                 <S.Button
                   onClick={() => setIsMenuVisible(!isMenuVisible)}
                   href="#demo"
@@ -280,6 +280,33 @@ const HomePage = () => {
             </S.CardsWrapper>
           </S.BenefitsWrapper>
         </S.WrapperItems>
+      </S.Wrapper>
+
+      <S.WrapperSecondary id="contact" style={{ height: "50vh" }}>
+        <S.WrapperItems>
+          <S.TitleWrapper>
+            <S.Title>CONTATE-NOS</S.Title>
+          </S.TitleWrapper>
+          <S.ContactsWrapper columns={3}>
+            <S.ContactWrapper>
+              <S.Text>seitonnegociacoes@gmail.com</S.Text>
+            </S.ContactWrapper>
+            <S.ContactWrapper>
+              <S.Text>(38) 99169-5259</S.Text>
+              <S.Text>(38) 99199-2007</S.Text>
+            </S.ContactWrapper>
+            <S.ContactWrapper>
+              <S.Text>
+                Av. Tancredo de Almeida Neves, 302 - Centro, Nova Porteirinha -
+                MG, 39525-000
+              </S.Text>
+            </S.ContactWrapper>
+          </S.ContactsWrapper>
+        </S.WrapperItems>
+      </S.WrapperSecondary>
+
+      <S.Wrapper style={{ height: "50vh" }}>
+        <h3>MAP</h3>
       </S.Wrapper>
 
       <S.WrapperSecondary style={{ height: "100%", paddingBottom: "10%" }}>
