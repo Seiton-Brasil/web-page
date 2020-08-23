@@ -9,6 +9,7 @@ import CardBenefits from "../components/CardBenefits"
 import CardContact from "../components/CardContact"
 import CardTeam from "../components/CardTeam"
 import Map from "../components/Map"
+import Form from "../components/Form"
 
 import * as S from "../styles/styles"
 
@@ -213,7 +214,7 @@ const HomePage = () => {
             />
             <CardBenefits
               icon={I.MdSecurity}
-              title="seguranca"
+              title="segurança"
               description={Descriptions.seguranca}
               colorIcon="#ace600"
             />
@@ -308,6 +309,26 @@ const HomePage = () => {
 
       <S.Wrapper style={{ height: "50vh" }}>
         <Map />
+      </S.Wrapper>
+
+      <S.Wrapper>
+        <S.WrapperItems>
+          <S.TitleWrapper>
+            <S.Title>AJUDE NOSSO DESENVOLVIMENTO</S.Title>
+          </S.TitleWrapper>
+          <S.TitleWrapper
+            style={{ justifyContent: "flex-start", textAlign: "justify" }}
+          >
+            <S.Text style={{ fontWeight: 300, fontSize: "1.5em" }}>
+              Estamos selecionando mineradoras que queiram alavancar suas vendas
+              e indústrias que desejam comprar minérios a preço acessível para
+              nos auxiliar nos testes do MVP. Quer fazer parte de um time que já
+              nasceu ganhando?
+            </S.Text>
+          </S.TitleWrapper>
+
+          <Form />
+        </S.WrapperItems>
       </S.Wrapper>
 
       <S.WrapperSecondary style={{ height: "100%", paddingBottom: "10%" }}>

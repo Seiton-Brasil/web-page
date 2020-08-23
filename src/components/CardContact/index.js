@@ -30,7 +30,7 @@ const CardContact = ({ title, details }) => {
           )
         ) : (
           <S.IconWrapper>
-            <S.Icon colorIcon="#ff4da6">
+            <S.Icon colorIcon="#d633ff">
               <S.LinkStyled
                 to="https://www.instagram.com/seitonbrasil/"
                 target="_blank"
