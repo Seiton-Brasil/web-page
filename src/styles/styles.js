@@ -71,8 +71,8 @@ export const HeaderWrapper = styled.header`
 `
 
 export const LogoWrapper = styled.div`
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;

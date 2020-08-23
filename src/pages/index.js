@@ -8,6 +8,7 @@ import I from "../components/Icons"
 import CardBenefits from "../components/CardBenefits"
 import CardContact from "../components/CardContact"
 import CardTeam from "../components/CardTeam"
+import Map from "../components/Map"
 
 import * as S from "../styles/styles"
 
@@ -306,7 +307,7 @@ const HomePage = () => {
       </S.WrapperSecondary>
 
       <S.Wrapper style={{ height: "50vh" }}>
-        <h3>MAP</h3>
+        <Map />
       </S.Wrapper>
 
       <S.WrapperSecondary style={{ height: "100%", paddingBottom: "10%" }}>
