@@ -8,10 +8,16 @@ import I from "../components/Icons"
 import CardBenefits from "../components/CardBenefits"
 import CardContact from "../components/CardContact"
 import CardTeam from "../components/CardTeam"
+import Map from "../components/Map"
+import Form from "../components/Form"
 
 import * as S from "../styles/styles"
 
+import { Descriptions, contacts, sections } from "../static"
+
 const HomePage = () => {
+  const [isMenuVisible, setIsMenuVisible] = useState(false)
+
   const {
     background,
     LogoImage,
@@ -23,6 +29,7 @@ const HomePage = () => {
     Mansueth,
     Gabriel,
     Leandro,
+    Helano,
   } = useStaticQuery(graphql`
     query {
       background: file(relativePath: { eq: "background-image.webp" }) {
@@ -95,27 +102,15 @@ const HomePage = () => {
           }
         }
       }
+      Helano: file(relativePath: { eq: "Helano.jpeg" }) {
+        childImageSharp {
+          fluid(maxWidth: 200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
-
-  const Descriptions = {
-    desburocratização:
-      "Sabe a burocracia para encontrar compradores para seus minérios? Agora você pode fazer negócios sem burocracia e dor de cabeça!",
-    desregionalização:
-      "Agora você pode acessar minérios em diferentes locais do Brasil, de forma simples e prática, e escolher de acordo a viabilidade econômica.",
-    seguranca:
-      "Negociações livres de especulação, com segurança jurídica e garantias referentes à veracidade de informações fornecidas!",
-    agilidade:
-      "Te fornecemos todas as informações necessárias para que seus negócios estejam à apenas um clique de distância!",
-    historia:
-      "Somos uma startup criada por intermediários de vendas do setor mineral e desenvolvida por um time incrível! Em nossa trilha de desenvolvimento, encontramos suporte no programa de pré aceleração Agita Warm Up Serra Geral e em nosso parceiro FAVAG.",
-    visao:
-      "Pretendemos ser referência em transações de minérios rápidas, práticas e seguras em todo o mundo.",
-    tecnologia:
-      "Trabalhamos com tecnologias que estão em alta no mercado e que são utilizadas por grandes empresas!",
-  }
-
-  const [isMenuVisible, setIsMenuVisible] = useState(false)
 
   return (
     <Layout>
@@ -140,7 +135,7 @@ const HomePage = () => {
                 <S.Button href="#benefits">Vantagens</S.Button>
                 <S.Button href="#about">Sobre nós</S.Button>
                 <S.Button href="#parterns">Parceiros</S.Button>
-                {/* <S.Button href="#contact">Contato</S.Button> */}
+                <S.Button href="#contact">Contato</S.Button>
                 <S.Button href="#demo">Demo</S.Button>
               </S.ButtonsWrapper>
               <S.MenuWrapper>
@@ -184,12 +179,12 @@ const HomePage = () => {
                 >
                   Parceiros
                 </S.Button>
-                {/* <S.Button
+                <S.Button
                   onClick={() => setIsMenuVisible(!isMenuVisible)}
                   href="#contact"
                 >
                   Contato
-                </S.Button> */}
+                </S.Button>
                 <S.Button
                   onClick={() => setIsMenuVisible(!isMenuVisible)}
                   href="#demo"
@@ -227,7 +222,7 @@ const HomePage = () => {
             />
             <CardBenefits
               icon={I.MdSecurity}
-              title="seguranca"
+              title="segurança"
               description={Descriptions.seguranca}
               colorIcon="#ace600"
             />
@@ -251,19 +246,19 @@ const HomePage = () => {
               icon={I.IoMdChatboxes}
               title="Nossa história"
               description={Descriptions.historia}
-              colorIcon="#797979"
+              colorIcon="#595959"
             />
             <CardBenefits
               icon={I.RiLightbulbFlashLine}
               title="Nossa visão"
               description={Descriptions.visao}
-              colorIcon="#797979"
+              colorIcon="#595959"
             />
             <CardBenefits
               icon={I.RiReactjsLine}
               title="Nossa tecnologia"
               description={Descriptions.tecnologia}
-              colorIcon="#797979"
+              colorIcon="#595959"
             />
           </S.BenefitsWrapper>
         </S.WrapperItems>
@@ -297,6 +292,53 @@ const HomePage = () => {
         </S.WrapperItems>
       </S.Wrapper>
 
+      <S.WrapperSecondary id="contact" style={{ height: "50vh" }}>
+        <S.WrapperItems>
+          <S.TitleWrapper>
+            <S.Title>CONTATE-NOS</S.Title>
+          </S.TitleWrapper>
+          <S.ContactsWrapper columns={3}>
+            <S.ContactWrapper>
+              <S.Text>seitonnegociacoes@gmail.com</S.Text>
+            </S.ContactWrapper>
+            <S.ContactWrapper>
+              <S.Text>(38) 99169-5259</S.Text>
+              <S.Text>(38) 99199-2007</S.Text>
+            </S.ContactWrapper>
+            <S.ContactWrapper>
+              <S.Text>
+                Av. Tancredo de Almeida Neves, 302 - Centro, Nova Porteirinha -
+                MG, 39525-000
+              </S.Text>
+            </S.ContactWrapper>
+          </S.ContactsWrapper>
+        </S.WrapperItems>
+      </S.WrapperSecondary>
+
+      <S.Wrapper style={{ height: "50vh" }}>
+        <Map />
+      </S.Wrapper>
+
+      <S.Wrapper>
+        <S.WrapperItems>
+          <S.TitleWrapper>
+            <S.Title>AJUDE NOSSO DESENVOLVIMENTO</S.Title>
+          </S.TitleWrapper>
+          <S.TitleWrapper
+            style={{ justifyContent: "flex-start", textAlign: "justify" }}
+          >
+            <S.Text style={{ fontWeight: 300, fontSize: "1.5em" }}>
+              Estamos selecionando mineradoras que queiram alavancar suas vendas
+              e indústrias que desejam comprar minérios a preço acessível para
+              nos auxiliar nos testes do MVP. Quer fazer parte de um time que já
+              nasceu ganhando?
+            </S.Text>
+          </S.TitleWrapper>
+
+          <Form />
+        </S.WrapperItems>
+      </S.Wrapper>
+
       <S.WrapperSecondary style={{ height: "100%", paddingBottom: "10%" }}>
         <S.WrapperItems>
           <S.TitleWrapper>
@@ -326,7 +368,7 @@ const HomePage = () => {
             <CardTeam
               Image={Leandro.childImageSharp.fluid}
               name="Wesley Leandro"
-              occupation="executivo de ti"
+              occupation="superintendente técnico"
               link="https://www.linkedin.com/in/wesley-leandro-43474416b"
             />
             <CardTeam
@@ -334,6 +376,12 @@ const HomePage = () => {
               name="Gabriel Aguiar"
               occupation="superintendente jurídico"
               link="https://www.linkedin.com/in/gabriel-aguiar-706894190"
+            />
+            <CardTeam
+              Image={Helano.childImageSharp.fluid}
+              name="Helano Celene"
+              occupation="investidor"
+              link="/"
             />
           </S.BenefitsWrapper>
         </S.WrapperItems>
@@ -357,48 +405,5 @@ const HomePage = () => {
     </Layout>
   )
 }
-
-const sections = [
-  {
-    id: 1,
-    detail: "Página Inicial",
-    link: "#initial",
-  },
-  {
-    id: 2,
-    detail: "Vantagens",
-    link: "#benefits",
-  },
-  {
-    id: 3,
-    detail: "Sobre Nós",
-    link: "#about",
-  },
-  {
-    id: 4,
-    detail: "Parceiros",
-    link: "#parterns",
-  },
-]
-
-const contacts = [
-  {
-    id: 1,
-    detail: "seitonnegociacoes@gmail.com",
-  },
-  {
-    id: 2,
-    detail: "(38) 99169-5259",
-  },
-  {
-    id: 3,
-    detail: "(38) 99199-2007",
-  },
-  {
-    id: 4,
-    detail:
-      "Av. Tancredo de Almeida Neves, 302 - Centro, Nova Porteirinha - MG, 39525-000",
-  },
-]
 
 export default HomePage

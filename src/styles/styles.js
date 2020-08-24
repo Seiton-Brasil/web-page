@@ -71,8 +71,8 @@ export const HeaderWrapper = styled.header`
 `
 
 export const LogoWrapper = styled.div`
-  width: 140px;
-  height: 140px;
+  width: 120px;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,16 +204,7 @@ export const BenefitsWrapper = styled.div`
   }
 `
 
-export const BenefitsWrapperFooter = styled(BenefitsWrapper)`
-  /* @media (max-width: 1650px) {
-    height: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    font-size: 17px;
-  }
-  @media (max-width: 900px) {
-    grid-template-columns: 1fr;
-  } */
-`
+export const BenefitsWrapperFooter = styled(BenefitsWrapper)``
 
 export const Title = styled.h1`
   font-size: 5.98em;
@@ -229,4 +220,42 @@ export const CardsWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+`
+// CONTACT SECTION ---------------------------------------------
+
+export const ContactsWrapper = styled(BenefitsWrapper)`
+  @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+  }
+`
+
+export const ContactWrapper = styled.div`
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+
+  @media (min-width: 1024px) {
+    :first-child {
+      border-right: 0.35em solid #4d4d4d;
+    }
+
+    :last-child {
+      border-left: 0.35em solid #4d4d4d;
+    }
+  }
+`
+
+export const Text = styled.h3`
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+  color: #4d4d4d;
 `
