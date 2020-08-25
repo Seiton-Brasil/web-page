@@ -267,28 +267,23 @@ const HomePage = () => {
         </S.CardsWrapper>
       </Section>
 
-      <S.WrapperSecondary id="contact" style={{ height: "50vh" }}>
-        <S.WrapperItems>
-          <S.TitleWrapper>
-            <S.Title>CONTATE-NOS</S.Title>
-          </S.TitleWrapper>
-          <S.ContactsWrapper columns={3}>
-            <S.ContactWrapper>
-              <S.Text>seitonnegociacoes@gmail.com</S.Text>
-            </S.ContactWrapper>
-            <S.ContactWrapper>
-              <S.Text>(38) 99169-5259</S.Text>
-              <S.Text>(38) 99199-2007</S.Text>
-            </S.ContactWrapper>
-            <S.ContactWrapper>
-              <S.Text>
-                Av. Tancredo de Almeida Neves, 302 - Centro, Nova Porteirinha -
-                MG, 39525-000
-              </S.Text>
-            </S.ContactWrapper>
-          </S.ContactsWrapper>
-        </S.WrapperItems>
-      </S.WrapperSecondary>
+      <Section title="CONTATE-NOS" height="50vh" id="contact" bg>
+        <S.ContactsWrapper columns={3}>
+          <S.ContactWrapper>
+            <S.Text>seitonnegociacoes@gmail.com</S.Text>
+          </S.ContactWrapper>
+          <S.ContactWrapper>
+            <S.Text>(38) 99169-5259</S.Text>
+            <S.Text>(38) 99199-2007</S.Text>
+          </S.ContactWrapper>
+          <S.ContactWrapper>
+            <S.Text>
+              Av. Tancredo de Almeida Neves, 302 - Centro, Nova Porteirinha -
+              MG, 39525-000
+            </S.Text>
+          </S.ContactWrapper>
+        </S.ContactsWrapper>
+      </Section>
 
       <S.Wrapper style={{ height: "50vh" }}>
         <Map />
@@ -308,7 +303,46 @@ const HomePage = () => {
         <Form />
       </Section>
 
-      <S.WrapperSecondary style={{ height: "100%", paddingBottom: "10%" }}>
+      <Section title="NOSSO TIME" height="100%" columns={3} bg>
+        <CardTeam
+          Image={Deborah.childImageSharp.fluid}
+          name="Deborah Ribeiro"
+          occupation="ceo"
+          link="https://www.linkedin.com/in/deborahribeiro"
+        />
+        <CardTeam
+          Image={Thiago.childImageSharp.fluid}
+          name="Thiago Ribeiro"
+          occupation="presidente"
+          link="https://www.linkedin.com/in/thiagoraphaelribeiro"
+        />
+        <CardTeam
+          Image={Mansueth.childImageSharp.fluid}
+          name="Mansueth Veloso"
+          occupation="conselheiro"
+          link="https://www.linkedin.com/in/mansueth-veloso-054919124"
+        />
+        <CardTeam
+          Image={Leandro.childImageSharp.fluid}
+          name="Wesley Leandro"
+          occupation="superintendente técnico"
+          link="https://www.linkedin.com/in/wesley-leandro-43474416b"
+        />
+        <CardTeam
+          Image={Gabriel.childImageSharp.fluid}
+          name="Gabriel Aguiar"
+          occupation="superintendente jurídico"
+          link="https://www.linkedin.com/in/gabriel-aguiar-706894190"
+        />
+        <CardTeam
+          Image={Helano.childImageSharp.fluid}
+          name="Helano Celene"
+          occupation="investidor"
+          link="/"
+        />
+      </Section>
+
+      {/* <S.WrapperSecondary style={{ height: "100%", paddingBottom: "10%" }}>
         <S.WrapperItems>
           <S.TitleWrapper>
             <S.Title style={{ color: "#1a1a1a", marginBottom: "15%" }}>
@@ -354,23 +388,19 @@ const HomePage = () => {
             />
           </S.BenefitsWrapper>
         </S.WrapperItems>
-      </S.WrapperSecondary>
+      </S.WrapperSecondary> */}
 
-      <S.WrapperFooter id="demo">
-        <S.WrapperItems>
-          <S.BenefitsWrapper columns={4}>
-            <S.LogoWrapperFooter>
-              <Img
-                fluid={LogoImage.childImageSharp.fluid}
-                style={{ width: 100, height: 100 }}
-              />
-            </S.LogoWrapperFooter>
-            <CardContact title="Links" details={sections} />
-            <CardContact title="Contatos" details={contacts} />
-            <CardContact title="Redes Sociais" />
-          </S.BenefitsWrapper>
-        </S.WrapperItems>
-      </S.WrapperFooter>
+      <Section id="demo" height="45vh" columns={4}>
+        <S.LogoWrapperFooter>
+          <Img
+            fluid={LogoImage.childImageSharp.fluid}
+            style={{ width: 100, height: 100 }}
+          />
+        </S.LogoWrapperFooter>
+        <CardContact title="Links" details={sections} />
+        <CardContact title="Contatos" details={contacts} />
+        <CardContact title="Redes Sociais" />
+      </Section>
     </Layout>
   )
 }

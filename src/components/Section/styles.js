@@ -6,7 +6,7 @@ const secondaryBackground = "#e7ff6e"
 
 export const Container = styled.section`
   width: 100%;
-  height: 100vh;
+  height: ${props => props.height};
   display: flex;
   justify-content: center;
   align-items: center;
