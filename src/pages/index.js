@@ -11,6 +11,8 @@ import CardTeam from "../components/CardTeam"
 import Map from "../components/Map"
 import Form from "../components/Form"
 
+import Section from "../components/Section"
+
 import * as S from "../styles/styles"
 
 import { Descriptions, contacts, sections } from "../static"
@@ -202,95 +204,68 @@ const HomePage = () => {
         </S.ImageBackground>
       </S.Wrapper>
 
-      <S.Wrapper id="benefits">
-        <S.WrapperItems>
-          <S.TitleWrapper>
-            <S.Title>VANTAGENS</S.Title>
-          </S.TitleWrapper>
-          <S.BenefitsWrapper columns={4}>
-            <CardBenefits
-              icon={I.IoMdChatboxes}
-              title="desburocratização"
-              description={Descriptions.desburocratização}
-              colorIcon="#ace600"
-            />
-            <CardBenefits
-              icon={I.FiMapPin}
-              title="desregionalização"
-              description={Descriptions.desregionalização}
-              colorIcon="#ace600"
-            />
-            <CardBenefits
-              icon={I.MdSecurity}
-              title="segurança"
-              description={Descriptions.seguranca}
-              colorIcon="#ace600"
-            />
-            <CardBenefits
-              icon={I.MdTrendingUp}
-              title="agilidade"
-              description={Descriptions.agilidade}
-              colorIcon="#ace600"
-            />
-          </S.BenefitsWrapper>
-        </S.WrapperItems>
-      </S.Wrapper>
+      <Section title="VANTAGENS" columns={4} id="benefits">
+        <CardBenefits
+          icon={I.IoMdChatboxes}
+          title="desburocratização"
+          description={Descriptions.desburocratização}
+          colorIcon="#ace600"
+        />
+        <CardBenefits
+          icon={I.FiMapPin}
+          title="desregionalização"
+          description={Descriptions.desregionalização}
+          colorIcon="#ace600"
+        />
+        <CardBenefits
+          icon={I.MdSecurity}
+          title="segurança"
+          description={Descriptions.seguranca}
+          colorIcon="#ace600"
+        />
+        <CardBenefits
+          icon={I.MdTrendingUp}
+          title="agilidade"
+          description={Descriptions.agilidade}
+          colorIcon="#ace600"
+        />
+      </Section>
 
-      <S.WrapperSecondary id="about">
-        <S.WrapperItems>
-          <S.TitleWrapper>
-            <S.Title>A SEITON</S.Title>
-          </S.TitleWrapper>
-          <S.BenefitsWrapper columns={3}>
-            <CardBenefits
-              icon={I.IoMdChatboxes}
-              title="Nossa história"
-              description={Descriptions.historia}
-              colorIcon="#595959"
-            />
-            <CardBenefits
-              icon={I.RiLightbulbFlashLine}
-              title="Nossa visão"
-              description={Descriptions.visao}
-              colorIcon="#595959"
-            />
-            <CardBenefits
-              icon={I.RiReactjsLine}
-              title="Nossa tecnologia"
-              description={Descriptions.tecnologia}
-              colorIcon="#595959"
-            />
-          </S.BenefitsWrapper>
-        </S.WrapperItems>
-      </S.WrapperSecondary>
+      <Section title="A SEITON" columns={3} id="about" bg>
+        <CardBenefits
+          icon={I.IoMdChatboxes}
+          title="Nossa história"
+          description={Descriptions.historia}
+          colorIcon="#595959"
+        />
+        <CardBenefits
+          icon={I.RiLightbulbFlashLine}
+          title="Nossa visão"
+          description={Descriptions.visao}
+          colorIcon="#595959"
+        />
+        <CardBenefits
+          icon={I.RiReactjsLine}
+          title="Nossa tecnologia"
+          description={Descriptions.tecnologia}
+          colorIcon="#595959"
+        />
+      </Section>
 
-      <S.Wrapper id="parterns">
-        <S.WrapperItems>
-          <S.TitleWrapper>
-            <S.Title>PARCEIROS</S.Title>
-          </S.TitleWrapper>
-          <S.BenefitsWrapper columns={3}>
-            <S.CardsWrapper>
-              <Img
-                fluid={Favaglab.childImageSharp.fluid}
-                style={{ width: 180 }}
-              />
-            </S.CardsWrapper>
-            <S.CardsWrapper>
-              <Img
-                fluid={FavagSprint.childImageSharp.fluid}
-                style={{ width: 180 }}
-              />
-            </S.CardsWrapper>
-            <S.CardsWrapper>
-              <Img
-                fluid={FavagLogo.childImageSharp.fluid}
-                style={{ width: 180 }}
-              />
-            </S.CardsWrapper>
-          </S.BenefitsWrapper>
-        </S.WrapperItems>
-      </S.Wrapper>
+      <Section title="PARCEIROS" columns={3} id="parterns">
+        <S.CardsWrapper>
+          <Img fluid={Favaglab.childImageSharp.fluid} style={{ width: 180 }} />
+        </S.CardsWrapper>
+        <S.CardsWrapper>
+          <Img
+            fluid={FavagSprint.childImageSharp.fluid}
+            style={{ width: 180 }}
+          />
+        </S.CardsWrapper>
+        <S.CardsWrapper>
+          <Img fluid={FavagLogo.childImageSharp.fluid} style={{ width: 180 }} />
+        </S.CardsWrapper>
+      </Section>
 
       <S.WrapperSecondary id="contact" style={{ height: "50vh" }}>
         <S.WrapperItems>
@@ -319,25 +294,19 @@ const HomePage = () => {
         <Map />
       </S.Wrapper>
 
-      <S.Wrapper>
-        <S.WrapperItems>
-          <S.TitleWrapper>
-            <S.Title>AJUDE NOSSO DESENVOLVIMENTO</S.Title>
-          </S.TitleWrapper>
-          <S.TitleWrapper
-            style={{ justifyContent: "flex-start", textAlign: "justify" }}
-          >
-            <S.Text style={{ fontWeight: 300, fontSize: "1.5em" }}>
-              Estamos selecionando mineradoras que queiram alavancar suas vendas
-              e indústrias que desejam comprar minérios a preço acessível para
-              nos auxiliar nos testes do MVP. Quer fazer parte de um time que já
-              nasceu ganhando?
-            </S.Text>
-          </S.TitleWrapper>
-
-          <Form />
-        </S.WrapperItems>
-      </S.Wrapper>
+      <Section title="AJUDE NOSSO DESENVOLVIMENTO">
+        <S.TitleWrapper
+          style={{ justifyContent: "flex-start", textAlign: "justify" }}
+        >
+          <S.Text style={{ fontWeight: 300, fontSize: "1.5em" }}>
+            Estamos selecionando mineradoras que queiram alavancar suas vendas e
+            indústrias que desejam comprar minérios a preço acessível para nos
+            auxiliar nos testes do MVP. Quer fazer parte de um time que já
+            nasceu ganhando?
+          </S.Text>
+        </S.TitleWrapper>
+        <Form />
+      </Section>
 
       <S.WrapperSecondary style={{ height: "100%", paddingBottom: "10%" }}>
         <S.WrapperItems>
