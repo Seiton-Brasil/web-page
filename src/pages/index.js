@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
@@ -19,8 +19,6 @@ import * as S from "../styles/styles"
 import { Descriptions, contacts, sections } from "../static"
 
 const HomePage = () => {
-  const [isMenuVisible, setIsMenuVisible] = useState(false)
-
   const {
     background,
     LogoImage,
@@ -194,12 +192,12 @@ const HomePage = () => {
       </Section>
 
       <Section id="demo" height="45vh" columns={4}>
-        <S.LogoWrapperFooter>
+        <S.LogoWrapper>
           <Img
             fluid={LogoImage.childImageSharp.fluid}
             style={{ width: 100, height: 100 }}
           />
-        </S.LogoWrapperFooter>
+        </S.LogoWrapper>
         <CardContact title="Links" details={sections} />
         <CardContact title="Contatos" details={contacts} />
         <CardContact title="Redes Sociais" />

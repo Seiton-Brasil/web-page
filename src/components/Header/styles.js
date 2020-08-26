@@ -2,9 +2,7 @@ import styled from "styled-components"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 
 const primaryColor = "#ffdb4d"
-const quintenaryColor = "#595959"
 const primaryBackground = "#ffffff"
-const secondaryBackground = "#e7ff6e"
 
 export const HeaderWrapper = styled.header`
   width: 100%;
@@ -77,11 +75,11 @@ export const MenuAmburguerWrapper = styled.aside`
   right: 0;
   display: ${props => (props.isMenuVisible ? "flex" : "none")};
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   font-size: 18px;
   text-transform: uppercase;
-  background-color: #4d4d4d;
+  background-color: #040e18;
   position: absolute;
   transition: 0.5s transform cubic-bezier(0.5, 0, 0, 1);
 

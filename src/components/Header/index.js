@@ -14,34 +14,41 @@ import {
   Text,
 } from "./styles"
 
-const Drawer = ({ onClick, isMenuVisible }) => {
+const Drawer = ({ onClick, isMenuVisible, image }) => {
   return (
     <MenuAmburguerWrapper isMenuVisible={isMenuVisible}>
-      <Button2 onClick={onClick} href="#initial">
-        <Icon.RiHome2Line color="#ffdb4d" />
-        <Text>Página Inicial</Text>
+      <div>
+        <Img fluid={image} style={{ width: 100, height: 100 }} />
+      </div>
+      <div style={{ width: "100%" }}>
+        <Button2 onClick={onClick} href="#initial">
+          <Icon.RiHome2Line color="#ffdb4d" />
+          <Text>Página Inicial</Text>
+        </Button2>
+        <Button2 onClick={onClick} href="#benefits">
+          <Icon.MdTrendingUp color="#ffffff" />
+          <Text>Vantagens</Text>
+        </Button2>
+        <Button2 onClick={onClick} href="#about">
+          <Icon.RiTeamLine color="#ffffff" />
+          <Text>Sobre nós</Text>
+        </Button2>
+        <Button2 onClick={onClick} href="#parterns">
+          <Icon.RiThumbUpLine color="#ffffff" />
+          <Text>Parceiros</Text>
+        </Button2>
+        <Button2 onClick={onClick} href="#contact">
+          <Icon.RiMailLine color="#ffffff" />
+          <Text>Contato</Text>
+        </Button2>
+        <Button2 onClick={onClick} href="#demo">
+          <Icon.RiArrowDownCircleLine color="#ffffff" />
+          <Text>Demo</Text>
+        </Button2>
+      </div>
+      <Button2>
+        <Icon.RiArrowLeftLine size={30} color="#ffffff" onClick={onClick} />
       </Button2>
-      <Button2 onClick={onClick} href="#benefits">
-        <Icon.MdTrendingUp color="#ffffff" />
-        <Text>Vantagens</Text>
-      </Button2>
-      <Button2 onClick={onClick} href="#about">
-        <Icon.RiTeamLine color="#ffffff" />
-        <Text>Sobre nós</Text>
-      </Button2>
-      <Button2 onClick={onClick} href="#parterns">
-        <Icon.RiThumbUpLine color="#ffffff" />
-        <Text>Parceiros</Text>
-      </Button2>
-      <Button2 onClick={onClick} href="#contact">
-        <Icon.RiMailLine color="#ffffff" />
-        <Text>Contato</Text>
-      </Button2>
-      <Button2 onClick={onClick} href="#demo">
-        <Icon.RiArrowDownCircleLine color="#ffffff" />
-        <Text>Demo</Text>
-      </Button2>
-      <Icon.MdClose size={30} color="#ffffff" onClick={onClick} />
     </MenuAmburguerWrapper>
   )
 }
@@ -100,6 +107,7 @@ const Header = () => {
       <Drawer
         onClick={() => setIsMenuVisible(!isMenuVisible)}
         isMenuVisible={isMenuVisible}
+        image={LogoImage.childImageSharp.fluid}
       />
     </HeaderWrapper>
   )
