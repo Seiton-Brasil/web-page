@@ -7,9 +7,10 @@ import SEO from "../components/Seo"
 import I from "../components/Icons"
 import CardBenefits from "../components/CardBenefits"
 import CardContact from "../components/CardContact"
-import CardTeam from "../components/CardTeam"
+import HandleCardsTeam from "../components/HandleCardsTeam"
 import Map from "../components/Map"
 import Form from "../components/Form"
+import Header from "../components/Header"
 
 import Section from "../components/Section"
 
@@ -26,12 +27,6 @@ const HomePage = () => {
     Favaglab,
     FavagSprint,
     FavagLogo,
-    Deborah,
-    Thiago,
-    Mansueth,
-    Gabriel,
-    Leandro,
-    Helano,
   } = useStaticQuery(graphql`
     query {
       background: file(relativePath: { eq: "background-image.webp" }) {
@@ -69,48 +64,6 @@ const HomePage = () => {
           }
         }
       }
-      Deborah: file(relativePath: { eq: "Deborah.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      Thiago: file(relativePath: { eq: "Thiago.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      Mansueth: file(relativePath: { eq: "Mansueth.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      Gabriel: file(relativePath: { eq: "Gabriel.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      Leandro: file(relativePath: { eq: "Leandro.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      Helano: file(relativePath: { eq: "Helano.jpeg" }) {
-        childImageSharp {
-          fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
     }
   `)
 
@@ -124,30 +77,8 @@ const HomePage = () => {
           backgroundColor={`#040e18`}
           className="image-background"
         >
+          <Header />
           <S.ImageBackgroundContent>
-            <S.HeaderWrapper>
-              <S.LogoWrapper color="#ffdb4d">
-                <Img
-                  fluid={LogoImage.childImageSharp.fluid}
-                  style={{ width: 100, height: 100 }}
-                />
-              </S.LogoWrapper>
-              <S.ButtonsWrapper>
-                <S.Button href="#initial">Página Inicial</S.Button>
-                <S.Button href="#benefits">Vantagens</S.Button>
-                <S.Button href="#about">Sobre nós</S.Button>
-                <S.Button href="#parterns">Parceiros</S.Button>
-                <S.Button href="#contact">Contato</S.Button>
-                <S.Button href="#demo">Demo</S.Button>
-              </S.ButtonsWrapper>
-              <S.MenuWrapper>
-                <I.MdMenu
-                  size={25}
-                  color="#ffdb4d"
-                  onClick={() => setIsMenuVisible(!isMenuVisible)}
-                />
-              </S.MenuWrapper>
-            </S.HeaderWrapper>
             <S.MainWrapper>
               <S.TextWrapper>
                 <S.TextDescription>
@@ -155,51 +86,6 @@ const HomePage = () => {
                 </S.TextDescription>
               </S.TextWrapper>
             </S.MainWrapper>
-            {isMenuVisible && (
-              <S.MenuAmburguerWrapper>
-                <S.Button
-                  onClick={() => setIsMenuVisible(!isMenuVisible)}
-                  href="#initial"
-                >
-                  Página Inicial
-                </S.Button>
-                <S.Button
-                  onClick={() => setIsMenuVisible(!isMenuVisible)}
-                  href="#benefits"
-                >
-                  Vantagens
-                </S.Button>
-                <S.Button
-                  onClick={() => setIsMenuVisible(!isMenuVisible)}
-                  href="#about"
-                >
-                  Sobre nós
-                </S.Button>
-                <S.Button
-                  onClick={() => setIsMenuVisible(!isMenuVisible)}
-                  href="#parterns"
-                >
-                  Parceiros
-                </S.Button>
-                <S.Button
-                  onClick={() => setIsMenuVisible(!isMenuVisible)}
-                  href="#contact"
-                >
-                  Contato
-                </S.Button>
-                <S.Button
-                  onClick={() => setIsMenuVisible(!isMenuVisible)}
-                  href="#demo"
-                >
-                  Demo
-                </S.Button>
-                <I.MdClose
-                  size={30}
-                  color="#ffdb4d"
-                  onClick={() => setIsMenuVisible(!isMenuVisible)}
-                />
-              </S.MenuAmburguerWrapper>
-            )}
           </S.ImageBackgroundContent>
         </S.ImageBackground>
       </S.Wrapper>
@@ -304,91 +190,8 @@ const HomePage = () => {
       </Section>
 
       <Section title="NOSSO TIME" height="100%" columns={3} bg>
-        <CardTeam
-          Image={Deborah.childImageSharp.fluid}
-          name="Deborah Ribeiro"
-          occupation="ceo"
-          link="https://www.linkedin.com/in/deborahribeiro"
-        />
-        <CardTeam
-          Image={Thiago.childImageSharp.fluid}
-          name="Thiago Ribeiro"
-          occupation="presidente"
-          link="https://www.linkedin.com/in/thiagoraphaelribeiro"
-        />
-        <CardTeam
-          Image={Mansueth.childImageSharp.fluid}
-          name="Mansueth Veloso"
-          occupation="conselheiro"
-          link="https://www.linkedin.com/in/mansueth-veloso-054919124"
-        />
-        <CardTeam
-          Image={Leandro.childImageSharp.fluid}
-          name="Wesley Leandro"
-          occupation="superintendente técnico"
-          link="https://www.linkedin.com/in/wesley-leandro-43474416b"
-        />
-        <CardTeam
-          Image={Gabriel.childImageSharp.fluid}
-          name="Gabriel Aguiar"
-          occupation="superintendente jurídico"
-          link="https://www.linkedin.com/in/gabriel-aguiar-706894190"
-        />
-        <CardTeam
-          Image={Helano.childImageSharp.fluid}
-          name="Helano Celene"
-          occupation="investidor"
-          link="/"
-        />
+        <HandleCardsTeam />
       </Section>
-
-      {/* <S.WrapperSecondary style={{ height: "100%", paddingBottom: "10%" }}>
-        <S.WrapperItems>
-          <S.TitleWrapper>
-            <S.Title style={{ color: "#1a1a1a", marginBottom: "15%" }}>
-              NOSSO TIME
-            </S.Title>
-          </S.TitleWrapper>
-          <S.BenefitsWrapper columns={3}>
-            <CardTeam
-              Image={Deborah.childImageSharp.fluid}
-              name="Deborah Ribeiro"
-              occupation="ceo"
-              link="https://www.linkedin.com/in/deborahribeiro"
-            />
-            <CardTeam
-              Image={Thiago.childImageSharp.fluid}
-              name="Thiago Ribeiro"
-              occupation="presidente"
-              link="https://www.linkedin.com/in/thiagoraphaelribeiro"
-            />
-            <CardTeam
-              Image={Mansueth.childImageSharp.fluid}
-              name="Mansueth Veloso"
-              occupation="conselheiro"
-              link="https://www.linkedin.com/in/mansueth-veloso-054919124"
-            />
-            <CardTeam
-              Image={Leandro.childImageSharp.fluid}
-              name="Wesley Leandro"
-              occupation="superintendente técnico"
-              link="https://www.linkedin.com/in/wesley-leandro-43474416b"
-            />
-            <CardTeam
-              Image={Gabriel.childImageSharp.fluid}
-              name="Gabriel Aguiar"
-              occupation="superintendente jurídico"
-              link="https://www.linkedin.com/in/gabriel-aguiar-706894190"
-            />
-            <CardTeam
-              Image={Helano.childImageSharp.fluid}
-              name="Helano Celene"
-              occupation="investidor"
-              link="/"
-            />
-          </S.BenefitsWrapper>
-        </S.WrapperItems>
-      </S.WrapperSecondary> */}
 
       <Section id="demo" height="45vh" columns={4}>
         <S.LogoWrapperFooter>

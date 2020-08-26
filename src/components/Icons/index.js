@@ -8,6 +8,11 @@ import {
   RiLinkedinBoxLine,
   RiFacebookBoxLine,
   RiLinkedinLine,
+  RiHome2Line,
+  RiMailLine,
+  RiThumbUpLine,
+  RiTeamLine,
+  RiArrowDownCircleLine,
 } from "react-icons/ri"
 
 import { FaLinkedinIn, FaLinkedin, FaInstagramSquare } from "react-icons/fa"
@@ -25,6 +30,11 @@ const Icons = {
   RiLinkedinBoxLine,
   RiFacebookBoxLine,
   RiLinkedinLine,
+  RiHome2Line,
+  RiMailLine,
+  RiThumbUpLine,
+  RiTeamLine,
+  RiArrowDownCircleLine,
   FaLinkedinIn,
   FaLinkedin,
   FaInstagramSquare,

@@ -55,20 +55,20 @@ export const ImageBackgroundContent = styled(Wrapper)`
   background-color: transparent;
 `
 
-export const HeaderWrapper = styled.header`
-  width: 60%;
-  height: 25vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+// export const HeaderWrapper = styled.header`
+//   width: 60%;
+//   height: 25vh;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   position: relative;
 
-  @media (max-width: 900px) {
-    height: 40vh;
-    flex-direction: column;
-    justify-content: center;
-  }
-`
+//   @media (max-width: 900px) {
+//     height: 40vh;
+//     flex-direction: column;
+//     justify-content: center;
+//   }
+// `
 
 export const LogoWrapper = styled.div`
   width: 120px;
