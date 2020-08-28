@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Compra e venda de minérios`,
     description: `Compra e venda de minerios em todas as regioes do brasil`,
-    author: `@seiton`,
-    siteUrl: `https://teste.com`,
+    author: `@seiton negociacoes`,
+    siteUrl: `https://seitonbrasil.com`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
