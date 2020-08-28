@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { colors } from "../../styles/Global"
 
 export const Wrapper = styled.div``
 
@@ -8,7 +9,7 @@ export const Input = styled.input`
   margin-bottom: 0.2em;
   border: 0;
   padding-left: 1em;
-  background-color: #e7ff6e;
+  background-color: ${colors.secondaryColor};
   border-radius: 2px;
 
   ::placeholder {
@@ -32,16 +33,16 @@ export const Button = styled.button`
   width: 100%;
   height: 40px;
   margin-top: 1em;
-  background-color: #ffffff;
-  color: #bfbfbf;
+  background-color: ${colors.white};
+  color: ${colors.quitenaryColor};
   transition: all 200ms;
   cursor: pointer;
-  border: 0.5px solid #bfbfbf;
+  border: 0.5px solid ${colors.quitenaryColor};
   border-radius: 2px;
 
   :hover {
-    border: 0.5px solid #737373;
-    color: #737373;
+    border: 0.5px solid ${colors.quartenaryColor};
+    color: ${colors.quartenaryColor};
   }
 
   :focus {
