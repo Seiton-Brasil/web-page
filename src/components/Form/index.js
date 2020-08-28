@@ -50,10 +50,10 @@ const Form = () => {
         </>
       ) : (
         <S.SuccessWrapper>
-          <h2>Obrigado!</h2>
-          <h4>
+          <h3>Obrigado!</h3>
+          <S.Text>
             Sua resposta foi enviada com sucesso! Agradecemos pela colaboração.
-          </h4>
+          </S.Text>
         </S.SuccessWrapper>
       )}
     </S.Wrapper>

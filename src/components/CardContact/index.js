@@ -13,14 +13,7 @@ const CardContact = ({ title, details }) => {
       <S.ItemsWrapper>
         {details ? (
           title !== "Links" ? (
-            details.map(item => (
-              <S.Items
-                href="https://www.gatsbyjs.com/docs/gatsby-link/"
-                key={item.id}
-              >
-                {item.detail}
-              </S.Items>
-            ))
+            details.map(item => <S.Items key={item.id}>{item.detail}</S.Items>)
           ) : (
             details.map(item => (
               <S.ItemsLink key={item.id} href={item.link}>

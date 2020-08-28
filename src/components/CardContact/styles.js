@@ -8,11 +8,6 @@ export const Wrapper = styled.div`
   border-top: 0.4em solid #797979;
 
   @media (max-width: 1650px) {
-    /* width: 95%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start; */
     border-top: 0.159em solid #797979;
   }
 
@@ -68,6 +63,7 @@ export const ItemsLink = styled(AnchorLink)`
   cursor: pointer;
   text-decoration: none;
   text-align: center;
+  margin-bottom: -5px;
 
   &:hover {
     color: #b3b300;
@@ -87,10 +83,6 @@ export const Items = styled.h4`
   color: #797979;
   margin-bottom: 0.5em;
   transition: all 200ms;
-
-  &:hover {
-    color: #b3b300;
-  }
 
   @media (max-width: 450px) {
     text-align: center;
