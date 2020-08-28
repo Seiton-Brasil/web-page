@@ -11,9 +11,6 @@ export const HeaderWrapper = styled.header`
   justify-content: space-around;
   align-items: center;
   position: absolute;
-
-  @media (max-width: 900px) {
-  }
 `
 export const LogoWrapper = styled.div`
   width: 120px;
