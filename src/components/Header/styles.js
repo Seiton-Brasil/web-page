@@ -1,8 +1,6 @@
 import styled from "styled-components"
 import AnchorLink from "react-anchor-link-smooth-scroll"
-
-const primaryColor = "#ffdb4d"
-const primaryBackground = "#ffffff"
+import { fonts, colors } from "../../styles/Global"
 
 export const HeaderWrapper = styled.header`
   width: 100%;
@@ -27,12 +25,13 @@ export const LogoWrapper = styled.div`
   }
 `
 export const ButtonsWrapper = styled.div`
+  display: flex;
   @media (max-width: 900px) {
     display: none;
   }
 `
 export const Button = styled(AnchorLink)`
-  color: ${primaryBackground};
+  color: ${colors.white};
   border: 0;
   padding: 1em;
   transition: all 300ms;
@@ -43,12 +42,12 @@ export const Button = styled(AnchorLink)`
   }
 
   &:first-child {
-    color: ${primaryColor};
+    color: ${colors.septenaryColor};
   }
 
   &:hover {
     cursor: pointer;
-    color: ${primaryColor};
+    color: ${colors.septenaryColor};
   }
 `
 export const Button2 = styled(Button)`
@@ -91,4 +90,10 @@ export const Text = styled.h3`
   padding: 0;
   font-size: 0.7em;
   margin-left: 0.9em;
+`
+export const TextBtn = styled.h3`
+  font-size: 0.855em;
+  font-family: ${fonts.primaryFont}, sans-serif;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
 `

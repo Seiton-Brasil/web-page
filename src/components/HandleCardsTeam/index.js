@@ -111,7 +111,7 @@ const HandleCardsTeam = () => {
         Image={Helano.childImageSharp.fluid}
         name="Helano Celene"
         occupation="investidor"
-        link="/"
+        link="https://www.linkedin.com/in/helano-celene-526822192"
       />
     </>
   )

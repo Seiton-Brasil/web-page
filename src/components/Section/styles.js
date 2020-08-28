@@ -1,8 +1,5 @@
 import styled from "styled-components"
-
-const quintenaryColor = "#595959"
-const primaryBackground = "#ffffff"
-const secondaryBackground = "#e7ff6e"
+import { colors } from "../../styles/Global"
 
 export const Container = styled.section`
   width: 100%;
@@ -11,7 +8,7 @@ export const Container = styled.section`
   justify-content: center;
   align-items: center;
   background-color: ${props =>
-    props.bg ? secondaryBackground : primaryBackground};
+    props.bg ? colors.secondaryColor : colors.white};
   font-size: 16px;
 
   @media (max-width: 1440px) {
@@ -66,5 +63,5 @@ export const Main = styled.div`
 export const Title = styled.h1`
   font-size: 5.98em;
   font-weight: bold;
-  color: ${quintenaryColor};
+  color: ${colors.octanaryColor};
 `

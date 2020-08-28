@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { Link } from "gatsby"
+import { fonts, colors } from "../../styles/Global"
 
 export const Wrapper = styled.section`
   width: 100%;
@@ -32,17 +33,18 @@ export const ImageTeam = styled(Img)`
     height: 140px;
   }
 `
-
 export const Name = styled.h2`
   font-size: 1.5em;
+  font-family: ${fonts.secondaryFont};
   font-weight: bold;
-  color: #000;
+  color: ${colors.dark};
   margin: 1em 0 0.8em 0;
 `
 export const Occupation = styled.h3`
   font-size: 1em;
   font-weight: 400;
-  color: #262626;
+  font-family: ${fonts.secondaryFont};
+  color: ${colors.sextenaryColor};
   text-transform: uppercase;
   margin: 0;
   text-align: center;

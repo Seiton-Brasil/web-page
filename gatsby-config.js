@@ -2,10 +2,11 @@ module.exports = {
   siteMetadata: {
     title: `Compra e venda de minérios`,
     description: `Compra e venda de minerios em todas as regioes do brasil`,
-    author: `@seiton`,
-    siteUrl: `https://teste.com`,
+    author: `@seiton negociacoes`,
+    siteUrl: `https://seitonbrasil.com`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -19,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Seiton | compra e venda de minerios`,
+        name: `Seiton Negociações`,
         short_name: `Seiton`,
         start_url: `/`,
         background_color: `#040e18`,
