@@ -1,14 +1,15 @@
 import styled from "styled-components"
 import AnchorLink from "react-anchor-link-smooth-scroll"
 import { Link } from "gatsby"
+import { fonts, colors } from "../../styles/Global"
 
 export const Wrapper = styled.div`
   width: 70%;
   height: 60%;
-  border-top: 0.4em solid #797979;
+  border-top: 0.4em solid ${colors.tertiaryColor};
 
   @media (max-width: 1650px) {
-    border-top: 0.159em solid #797979;
+    border-top: 0.159em solid ${colors.tertiaryColor};
   }
 
   @media (max-width: 900px) {
@@ -16,11 +17,11 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-top: 0.159em solid #797979;
+    border-top: 0.159em solid ${colors.tertiaryColor};
   }
 
   @media (max-width: 450px) {
-    border-top: 0.1em solid #797979;
+    border-top: 0.1em solid ${colors.tertiaryColor};
   }
 `
 export const TitleWrapper = styled.div`
@@ -51,14 +52,15 @@ export const ItemsWrapper = styled.div`
 export const Title = styled.h2`
   font-size: 1em;
   font-weight: bold;
-  color: #797979;
+  color: ${colors.tertiaryColor};
   text-transform: uppercase;
   margin-top: 15%;
 `
 export const ItemsLink = styled(AnchorLink)`
   font-size: 1em;
+  font-family: ${fonts.primaryFont}, sans-serif;
   font-weight: bold;
-  color: #797979;
+  color: ${colors.tertiaryColor};
   transition: all 200ms;
   cursor: pointer;
   text-decoration: none;
@@ -66,7 +68,7 @@ export const ItemsLink = styled(AnchorLink)`
   margin-bottom: -5px;
 
   &:hover {
-    color: #b3b300;
+    color: ${colors.primaryColor};
   }
 
   @media (max-width: 900px) {
@@ -80,7 +82,7 @@ export const ItemsLink = styled(AnchorLink)`
 export const Items = styled.h4`
   font-size: 1em;
   font-weight: bold;
-  color: #797979;
+  color: ${colors.tertiaryColor};
   margin-bottom: 0.5em;
   transition: all 200ms;
 
@@ -94,7 +96,7 @@ export const IconWrapper = styled.div`
 `
 export const Icon = styled.div`
   transition: all 200ms;
-  color: #797979;
+  color: ${colors.tertiaryColor};
 
   &:hover {
     color: ${props => props.colorIcon};

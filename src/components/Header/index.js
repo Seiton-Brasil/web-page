@@ -12,6 +12,7 @@ import {
   MenuWrapper,
   MenuAmburguerWrapper,
   Text,
+  TextBtn,
 } from "./styles"
 
 const Drawer = ({ onClick, isMenuVisible, image }) => {
@@ -90,12 +91,24 @@ const Header = () => {
       </LogoWrapper>
 
       <ButtonsWrapper>
-        <Button href="#initial">Página Inicial</Button>
-        <Button href="#benefits">Vantagens</Button>
-        <Button href="#about">Sobre nós</Button>
-        <Button href="#parterns">Parceiros</Button>
-        <Button href="#contact">Contato</Button>
-        <Button href="#demo">Demo</Button>
+        <Button href="#initial">
+          <TextBtn>Página Inicial</TextBtn>
+        </Button>
+        <Button href="#benefits">
+          <TextBtn>Vantagens</TextBtn>
+        </Button>
+        <Button href="#about">
+          <TextBtn>Sobre nós</TextBtn>
+        </Button>
+        <Button href="#parterns">
+          <TextBtn>Parceiros</TextBtn>
+        </Button>
+        <Button href="#contact">
+          <TextBtn>Contato</TextBtn>
+        </Button>
+        <Button href="#demo">
+          <TextBtn>Demo</TextBtn>
+        </Button>
       </ButtonsWrapper>
 
       <MenuWrapper>
