@@ -68,15 +68,17 @@ const Header = () => {
     }
   `)
 
-  // React.useEffect(() => {
-  //   function onScroll() {
-  //     setIsMenuVisible(window.scrollY === 0 ? true : false)
-  //   }
+  React.useEffect(() => {
+    function onScroll() {
+      setIsMenuVisible(
+        window.scrollY === 0 && window.innerWidth <= 900 ? true : false
+      )
+    }
 
-  //   window.addEventListener("scroll", onScroll)
+    window.addEventListener("scroll", onScroll)
 
-  //   return () => window.removeEventListener("scroll", onScroll)
-  // }, [])
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   return (
     <HeaderWrapper>

@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Compra e venda de minérios`,
-    description: `Seus minérios a um click de distância`,
+    description: `Compra e venda de minerios em todas as regioes do brasil`,
     author: `@seiton`,
+    siteUrl: `https://teste.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,15 +19,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Seiton | compra e venda de minerios`,
+        short_name: `Seiton`,
         start_url: `/`,
+        background_color: `#040e18`,
+        theme_color: `#040e18`,
         display: `minimal-ui`,
         icon: `src/images/seiton-logo.jpeg`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-sitemap`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

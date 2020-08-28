@@ -53,11 +53,7 @@ export const Text = styled.h3`
   font-weight: bold;
   margin: 0.5em;
   letter-spacing: 1px;
-  transition: all 200ms;
-
-  :hover {
-    letter-spacing: 2px;
-  }
+  text-align: center;
 `
 export const Title = styled.h4`
   font-size: 1.2em;
