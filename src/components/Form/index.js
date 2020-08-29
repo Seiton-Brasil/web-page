@@ -29,7 +29,7 @@ const Form = () => {
       {success ? (
         <>
           <S.Title>Envie-nos seus dados para que possamos contatá-lo:</S.Title>
-          <form onSubmit={handleEnvForm}>
+          <form onSubmit={handleEnvForm} data-netlify="true">
             <S.Input
               placeholder="Nome"
               onChange={event => setName(event.target.value)}
