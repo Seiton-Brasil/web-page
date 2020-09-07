@@ -7,20 +7,25 @@ const Form = () => {
   const [name, setName] = useState("")
   const [phone, setPhone] = useState("")
   const [email, setEmail] = useState("")
+  const [nameErr, setNameErr] = useState(false)
+  const [phoneErr, setPhoneErr] = useState(false)
+  const [emailErr, setEmailErr] = useState(false)
   const [success, setSuccess] = useState(true)
 
   const handleEnvForm = e => {
     e.preventDefault()
+
+    setNameErr(name ? false : true)
+    setPhoneErr(phone ? false : true)
+    setEmailErr(email ? false : true)
+
     if (name && phone && email) {
       Firebase.database().ref().push().set({
         name: name,
         phone: phone,
         email: email,
       })
-
       setSuccess(!success)
-    } else {
-      alert("Por favor, preencha todos os campos!")
     }
   }
 
@@ -29,17 +34,20 @@ const Form = () => {
       {success ? (
         <>
           <S.Title>Envie-nos seus dados para que possamos contatá-lo:</S.Title>
-          <form onSubmit={handleEnvForm} data-netlify="true">
+          <form onSubmit={handleEnvForm}>
             <S.Input
               placeholder="Nome"
+              error={nameErr}
               onChange={event => setName(event.target.value)}
             />
             <S.Input
               placeholder="Telefone"
+              error={phoneErr}
               onChange={event => setPhone(event.target.value)}
             />
             <S.Input
               placeholder="Email"
+              error={emailErr}
               onChange={event => setEmail(event.target.value)}
             />
 
