@@ -7,7 +7,8 @@ export const Input = styled.input`
   width: 100%;
   height: 40px;
   margin-bottom: 0.2em;
-  border: 0;
+  border: ${props => (props.error ? 0.5 : 0)};
+  border-color: #ff9900;
   padding-left: 1em;
   background-color: ${colors.secondaryColor};
   border-radius: 2px;

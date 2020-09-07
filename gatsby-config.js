@@ -3,7 +3,7 @@ module.exports = {
     title: `Compra e venda de minérios`,
     description: `Compra e venda de minerios em todas as regioes do brasil`,
     author: `@seiton negociacoes`,
-    siteUrl: `https://seitonbrasil.com`,
+    siteUrl: `http://seitonbrasil.com`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
